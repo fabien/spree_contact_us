@@ -1,17 +1,14 @@
 class Inquiry < ActiveRecord::Base
-
-  validates_presence_of :name
-  validates_presence_of :email
-  validates_presence_of :message
+  
+  validates :name, :message, :presence => true
+  validates :email,        :format => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
    
- after_save :deliver_notification_email
-
+  after_save :deliver_notification_email
 
   def deliver_notification_email
     InquiryMailer.notification(self).deliver
     # For delayed_job
     # InquiryMailer.send_later(:deliver_notification, self)
   end
-
 
 end

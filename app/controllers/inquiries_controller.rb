@@ -10,7 +10,7 @@ class InquiriesController < Spree::BaseController
     @inquiry = Inquiry.new(params[:inquiry])
 
     respond_to do |format|
-      if simple_captcha_valid?
+      if simple_captcha_valid? || Spree::Captcha::Config[:use_captcha] == false
         if @inquiry.valid? && @inquiry.save
           format.html do
             flash[:notice] = t(:on_send_message)
