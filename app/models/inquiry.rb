@@ -1,7 +1,7 @@
 class Inquiry < ActiveRecord::Base
   
   validates :name, :message, :presence => true
-  validates :email,        :format => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
+  validates :email, :format => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
    
   after_save :deliver_notification_email
 

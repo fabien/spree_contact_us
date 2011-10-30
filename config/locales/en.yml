@@ -4,6 +4,7 @@ en:
       inquiry:
         name: "Name"
         email: "Email"
+        phone_number: "Phone Number"
         inquiry_type: "Theme"
         message: "Message"
   inquiries: "Inquiries"
@@ -11,8 +12,10 @@ en:
   contact_form: "Contact Form"
   your_name: "Your Name"
   your_email: "Your Email Address"
+  your_phone_number: "Your Phone Number"
   type_inquiry: "Type of Inquiry"
   number_order: "Order №"
+  phone_number: "Phone Number"
   message: "Message"
   send_it: "Send It!"
   send_news_and_info: "Subscribe to news"
