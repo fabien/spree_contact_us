@@ -1,6 +1,7 @@
 INQUIRY_TYPES = [
-        :common,
-        :orders_and_products,
-        :suggestions,
-        :other
+  :general_info,
+  :orders_and_products,
+  :order_info,
+  :suggestions,
+  :other
 ]
