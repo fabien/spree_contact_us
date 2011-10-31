@@ -35,5 +35,9 @@ class InquiriesController < Spree::BaseController
     flash[:notice] = t(:inquiry_sent_succesfully)
     redirect_to(@inquiry)
   end
+  
+  def accurate_title
+    I18n.t 'contact_us'
+  end
 
 end
