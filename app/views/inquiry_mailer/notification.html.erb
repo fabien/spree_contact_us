@@ -1,8 +1,0 @@
-<h1><%= t(:inquiry_header) %></h1>
-<p><strong><%= t(:inquiry_from) %>:</strong> <%= @inquiry.name %> (<%= @inquiry.email %>)</p>
-<% unless @inquiry.phone_number.blank? %><p><strong><%= t(:phone_number) %>:</strong> <%= @inquiry.phone_number %></p><% end %>
-<p><strong><%= t(:inquiry_type) %>:</strong> <%= @inquiry.inquiry_type %></p>
-<% unless @inquiry.order_no.blank? %><p><strong><%= t(:inquiry_order_no) %>:</strong> <%= @inquiry.order_no %></p><% end %>
-<br/>
-<h2><%= t(:inquiry_message) %>:<h2>
-<p><%= @inquiry.message %></p>

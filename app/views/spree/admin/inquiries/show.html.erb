@@ -14,13 +14,13 @@
 </p>
 <% unless @inquiry.order_no.blank? %>
 <p>
-  <strong><%= t(:inquiry_order_no) %>:</strong> <%= @inquiry.order_no %>
+  <strong><%= t(:order) %>:</strong> <%= @inquiry.order_no %>
 </p>
 <% end %>
 <p>
-  <strong><%= t(:inquiry_message) %>:</strong> <%= h @inquiry.message %>
+  <strong><%= t(:message) %>:</strong> <%= h @inquiry.message %>
 </p>
 <p>
-  <%= link_to t(:back), collection_url %> | 
+  <%= link_to t(:back), collection_url %> |
   <%= link_to t(:delete), object_url, :confirm => t(:are_you_sure_delete), :method => :delete %>
 </p>
